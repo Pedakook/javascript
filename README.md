@@ -53,7 +53,14 @@ hours = hours < 10 ? '0' + hours : hours;
 minutes = minutes < 10 ? '0' + minutes : minutes;
 seconds = seconds < 10 ? '0' + seconds : seconds;
 ```
-Igaüks neist ridadest kontrollib, kas tundide, minutite või sekundite väärtus on väiksem kui 10. Kui jah, siis eesliide '0' lisatakse väärtuse ette. See on lühike viis kirjutada if-else lauseid, mida nimetatakse tingimusoperaatoriks.
+Igaüks neist ridadest kontrollib, kas tundide, minutite või sekundite väärtus on väiksem kui 10. Kui jah, siis eesliide '0' lisatakse väärtuse ette. See on lühike viis kirjutada if-else lauseid, mida nimetatakse tingimusoperaatoriks. Pikemalt kirjutades oleks üks rida selline:
+```javascript
+if (hours < 10) {
+    hours = '0' + hours;
+} else {
+    hours = hours;
+}
+```
 
 ```javascript
 clock.textContent = hours + ':' + minutes + ':' + seconds;
