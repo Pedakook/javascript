@@ -3,7 +3,7 @@
 See on lihtsa digikella näidis, demonstreerimaks algajatele, mida lihtsat Javascriptga teha saab.
 ## Javaskripti osa
 
-Selline väike koodijupp teeb seda, et hangib arvutilt kellaaja ja muudab seda iga sekundi tagant:
+Selline väike koodijupp teeb seda, et hangib arvutilt kellaaja ja muudab seda iga sekundi (1000 millisekundit) tagant:
 ```javascript
 const displayClock = () => {
 
