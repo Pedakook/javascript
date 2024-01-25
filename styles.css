@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+
+    font-family: 'Cute Font', sans-serif;
+    font-size: 25vw;
+
+    text-shadow: 0 0 2rem white;
+}
+
+.colon {
+    display: inline-block;
+    transform: translate(50%, -4%);
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(10); /* Algab viis korda suurem kui algne suurus */
+        opacity: 0;
+    }
+    to {
+        transform: scale(1); /* Lõpeb algse suurusega */
+        opacity: 1;
+    }
+}
+
+.zoom-in {
+    animation: zoom-in 0.5s ease-out;
+    display: inline-block;
+}
+
