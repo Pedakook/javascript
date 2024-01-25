@@ -29,7 +29,7 @@ const displayClock = () => {
 ```javascript
 const displayClock = () => {
 ```
-See rida loob noolefunktsiooni displayClock. Noolefunktsioonid on lühem viis funktsioonide defineerimiseks JavaScriptis.
+See rida loob noolefunktsiooni displayClock. Noolefunktsioonid on lühem viis funktsioonide defineerimiseks JavaScriptis. Vanal moel oleks see kirjutatud selliselt: `function displayClock() {`
 
 ```javascript
 const clock = document.getElementById('clock');
