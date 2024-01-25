@@ -201,8 +201,13 @@ Esimesel juhul on käsklu `git config --global init.defaultBranch <siia soovitav
 Teisel juhul `git branch -m <siia soovitav nimi>`
 
 Seejärel:
-`git init`
-`git add .`
-`git commit -m "Add existing project files to Git"`
-`git remote add origin https://github.com/sinurepoaadress`
-`git push -u -f origin main`
+```bash
+git init
+git add .
+git commit -m "Add existing project files to Git"
+git remote add origin https://github.com/sinurepoaadress
+git push -u -f origin main
+```
+
+## Juhul kui kasutad arvutit mitme kasutajaga ja tegib probleeme githubi terminali kaudu sisselogimisel
+Võid end autentida käsuga `gh auth login`
