@@ -2,6 +2,29 @@
 See on lihtsa digikella näidis, demonstreerimaks algajatele, mida lihtsat Javascriptga teha saab.
 ## Javaskripti osa
 
+Selline väike koodijupp teeb seda, et hangib artuilt kellaaja ja muudab seda iga sekundi tagant:
+```javascript
+const displayClock = () => {
+
+    const clock = document.getElementById('clock');
+    const date = new Date();
+
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    clock.textContent = hours + ':' + minutes + ':' + seconds;
+    };
+    
+    setInterval(displayClock, 1000);
+```
+
+### Siin nüüd täpsemalt iga rida lahti kirjutatud:
+
 ```javascript
 const displayClock = () => {
 ```
@@ -46,6 +69,42 @@ setInterval(displayClock, 1000);
 See rida käivitab displayClock funktsiooni iga 1000 millisekundi (1 sekundi) järel. See tagab, et kell värskendab aega iga sekundi järel.
 
 ## Veidi keerulisem, animatsiooniga versioon
+See on juba pisut keerulisem, lisatud on animatsioon ja kõik numbrid on lahku löödud, et animatsioon toimiks igale numbrile eraldi:
+
+```javascript
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    updateNumber('hour-ten', hours[0]);
+    updateNumber('hour-unit', hours[1]);
+    updateNumber('minute-ten', minutes[0]);
+    updateNumber('minute-unit', minutes[1]);
+    updateNumber('second-ten', seconds[0]);
+    updateNumber('second-unit', seconds[1]);
+}
+
+function updateNumber(id, newDigit) {
+    const element = document.getElementById(id);
+    if (element.textContent !== newDigit) {
+        element.textContent = newDigit;
+        applyZoomInAnimation(element);
+    }
+}
+
+function applyZoomInAnimation(element) {
+    element.classList.add('zoom-in');
+    setTimeout(() => {
+        element.classList.remove('zoom-in');
+    }, 500); // Eemalda klass peale animatsiooni lõppu
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // Käivita kohe, et vältida tühja ekraani alguses
+```
+### Siin taas täpsemalt iga rida lahti kirjutatud:
 
 Funktsioon updateClock
 ```javascript
