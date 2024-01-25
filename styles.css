@@ -14,6 +14,16 @@ body {
     text-shadow: 0 0 2rem white;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+a.link {
+    color: white;
+    font-size: 3rem !important;
+} 
+
 .colon {
     display: inline-block;
     transform: translate(50%, -4%);
