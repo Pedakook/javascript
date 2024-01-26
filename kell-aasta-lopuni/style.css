@@ -1,0 +1,10 @@
+.countdown {
+
+}
+
+.countdown-item {
+    margin: 5px;
+    padding: 5px;
+    font-size: 4rem; /* Lisa suurus numbrile vastavalt soovile */
+    font-family: 'Rubik Mono One', sans-serif;
+}
